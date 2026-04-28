@@ -1,0 +1,327 @@
+/* ISMOShare — styles globaux + navigation + zones de contenu */
+
+:root {
+  --ismo-teal: #0f766e;
+  --ismo-teal-dark: #0d5d56;
+  --ismo-teal-light: #14b8a6;
+  --ismo-surface: #f0f4f3;
+  --ismo-card: #ffffff;
+  --ismo-text: #1e293b;
+  --ismo-muted: #64748b;
+  --ismo-radius: 12px;
+  --ismo-shadow: 0 4px 24px rgba(15, 118, 110, 0.08);
+  --ismo-shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.ismo-body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ismo-text);
+  background: var(--ismo-surface);
+  min-height: 100vh;
+}
+
+/* ---------- Navbar unifiée ---------- */
+.ismo-navbar {
+  background: linear-gradient(105deg, var(--ismo-teal-dark) 0%, var(--ismo-teal) 45%, #0d9488 100%) !important;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ismo-navbar .navbar-brand {
+  color: #fff !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+.ismo-navbar .navbar-brand img {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.ismo-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.65rem !important;
+  border-radius: 8px;
+  margin: 0.1rem 0;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.ismo-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff !important;
+}
+
+.ismo-navbar .nav-link.active {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 600;
+}
+
+.ismo-navbar .nav-link.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 4px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: 0.95;
+}
+
+.ismo-navbar .btn-outline-light {
+  border-width: 1.5px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+}
+
+.ismo-navbar .btn-outline-light:hover {
+  background: #fff;
+  color: var(--ismo-teal) !important;
+}
+
+.ismo-navbar .navbar-toggler {
+  box-shadow: none;
+}
+
+/* Badge cloche */
+.ismo-nav-badge {
+  font-size: 0.65rem;
+  min-width: 1.1rem;
+  padding: 0.2em 0.45em;
+}
+
+/* ---------- Contenu pages ---------- */
+.ismo-main {
+  padding: 1.75rem 0 3rem;
+  min-height: calc(100vh - 4rem);
+}
+
+.ismo-page-title {
+  font-weight: 700;
+  color: var(--ismo-teal-dark);
+  font-size: 1.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.ismo-page-sub {
+  color: var(--ismo-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Carte / wrapper tableau */
+.ismo-panel {
+  background: var(--ismo-card);
+  border-radius: var(--ismo-radius);
+  box-shadow: var(--ismo-shadow-sm);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  overflow: hidden;
+}
+
+.ismo-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ismo-table-wrap table {
+  margin-bottom: 0;
+}
+
+.ismo-table-wrap thead th {
+  background: linear-gradient(180deg, var(--ismo-teal) 0%, var(--ismo-teal-dark) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  border: none;
+  padding: 0.85rem 1rem;
+  white-space: nowrap;
+}
+
+.ismo-table-wrap tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border-color: #eef2f0;
+  font-size: 0.9rem;
+  max-width: 280px;
+}
+
+.ismo-table-wrap tbody tr:hover {
+  background: rgba(20, 184, 166, 0.06);
+}
+
+/* Photos profil dans tableaux */
+.ismo-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(15, 118, 110, 0.25);
+  background: #e2e8f0;
+}
+
+.ismo-avatar-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: rgba(15, 118, 110, 0.15);
+  color: var(--ismo-teal-dark);
+}
+
+/* Cartes génériques */
+.ismo-body .card {
+  border-radius: var(--ismo-radius);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  box-shadow: var(--ismo-shadow-sm);
+}
+
+/* Ancienne classe conservée pour compatibilité */
+.bg-ismo {
+  background: linear-gradient(105deg, var(--ismo-teal-dark) 0%, var(--ismo-teal) 100%) !important;
+}
+
+/* ---------- Page validation inscription ---------- */
+.validation-page .main-content {
+  padding-top: 1rem;
+}
+
+.validation-page .header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.validation-page .logo-text {
+  font-weight: 700;
+  color: var(--ismo-teal-dark);
+  font-size: 1.5rem;
+}
+
+.validation-page .table-container {
+  background: var(--ismo-card);
+  border-radius: var(--ismo-radius);
+  box-shadow: var(--ismo-shadow-sm);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  overflow: hidden;
+}
+
+.validation-page .table-container .table {
+  margin-bottom: 0;
+}
+
+.validation-page .table thead th {
+  background: linear-gradient(180deg, var(--ismo-teal) 0%, var(--ismo-teal-dark) 100%);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: none;
+  white-space: nowrap;
+}
+
+.validation-page .table tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border-color: #eef2f0;
+  max-width: 220px;
+}
+
+.validation-page .table tbody td img.rounded-circle {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border: 2px solid rgba(15, 118, 110, 0.2);
+}
+
+.validation-page .table tbody tr:hover {
+  background: rgba(20, 184, 166, 0.06);
+}
+
+.validation-page .user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 184, 166, 0.2);
+  color: var(--ismo-teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.validation-page .badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.validation-page .btn-validate {
+  background: #d1fae5;
+  color: #065f46;
+  border: none;
+}
+
+.validation-page .btn-validate:hover {
+  background: #a7f3d0;
+}
+
+.validation-page .btn-reject {
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+}
+
+.validation-page .btn-reject:hover {
+  background: #fecaca;
+}
+
+.validation-page .btn-view {
+  background: #e2e8f0;
+  color: #334155;
+  border: none;
+}
+
+.validation-page .btn-view:hover {
+  background: #cbd5e1;
+}
+
+.validation-page .empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: var(--ismo-muted);
+}
+
+.validation-page .field-label {
+  font-weight: 600;
+  color: var(--ismo-teal);
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .ismo-navbar .navbar-collapse {
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 0.5rem;
+  }
+
+  .ismo-navbar .ms-lg-auto {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+}
